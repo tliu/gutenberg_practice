@@ -3,7 +3,7 @@ Spin up a REST API located at localhost:12345
 | endpoint    | expected return |
 | ----------- | --------------- |
 | /book/\<id\>  | full text of book with id: \<id\> |
-| /book/\<id\>/freq  | word frequency map, sorted alphabetically by word, one line per entry in the form "[word] [count]" words should be lowercase and all non-alphanumeric characters can be removed |
+| /book/\<id\>/freq  | word frequency map, sorted alphabetically by word, one line per entry in the form "[word] [count]" words should be lowercase and you should use `nltk.word_tokenize` |
 | /word/\<word\> | occurences of \<word\> in all books |
 | /word/\<word\>/best_book | title of book with most occurences of \<word\>, if there is a tie return the book with a longer title |
 | /title/autocomplete/\<query\> | return all books that have a title starting with \<query\> (what we would use if we were making a title autocomplete box |
